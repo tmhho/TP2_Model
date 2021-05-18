@@ -69,11 +69,11 @@ def MatA(L, V0, D, h, dt, K, indk, vit):
 
 def secmb(K, dt, h, L, Tbas, Thaut, indk, source):
     S = np.zeros((K+1)**2)
-    for i in range(K):
+    for i in range(K+1):
         j = 0 
         k = indk(i,j,K)
         S[k] = Tbas 
-    for i in range(K):
+    for i in range(K+1):
         j = K 
         k = indk(i,j,K)
         S[k] = Thaut 
